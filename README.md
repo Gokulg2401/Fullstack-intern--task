@@ -14,8 +14,8 @@ A full-stack web application that allows users to browse, favorite, and manage w
 - User registration and login with JWT authentication
 - Browse available templates with image, title, and detailed descriptions
 - **🔎 Advanced Search** - Filter templates by name or category with real-time results
-- Mark templates as favorites (authenticated users only)
-- View personal favorites in a dedicated section with search functionality
+- Mark templates as favourites (authenticated users only)
+- View personal favourites in a dedicated section with search functionality
 - **Enhanced Template Details** - Each template includes additional descriptive information
 - Responsive design with modern glassmorphism UI
 - Improved navbar with better logout button visibility
@@ -111,8 +111,8 @@ The application will be available at `http://localhost:3000`
 
 1. Register a new account or login with existing credentials
 2. Browse the available templates on the home page
-3. Click the heart icon to add templates to your favorites
-4. View your favorite templates in the "My Favorites" section
+3. Click the heart icon to add templates to your favourites
+4. View your favourite templates in the "My Favourites" section
 5. Logout when done
 
 ## Development Notes
@@ -134,7 +134,7 @@ The application will be available at `http://localhost:3000`
 2. **Enhanced Template Information** - Additional descriptive lines for each template
 3. **Improved UI/UX** - Better styling, search icons, and visual feedback
 4. **Database Schema Updates** - Added `additional_description` field to templates
-5. **Search Integration** - Available on both Templates and Favorites pages
+5. **Search Integration** - Available on both Templates and Favourites pages
 6. **Better Navigation** - Improved logout button visibility and styling
 
 ### 🛠️ Technical Improvements:

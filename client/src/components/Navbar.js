@@ -12,7 +12,7 @@ const Navbar = () => {
         <div>
           {user ? (
             <>
-              <Link to="/favorites">My Favorites</Link>
+              <Link to="/favorites">My Favourites</Link>
               <button onClick={logout} className="btn btn-secondary">Logout</button>
             </>
           ) : (

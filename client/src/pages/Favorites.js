@@ -44,15 +44,15 @@ const Favorites = () => {
 
   return (
     <div className="container">
-      <h1>My Favorites</h1>
+      <h1>My Favourites</h1>
       {favorites.length === 0 ? (
-        <p>No favorites yet. Start adding some templates to your favorites!</p>
+        <p>No favourites yet. Start adding some templates to your favourites!</p>
       ) : (
         <>
           <div className="search-container">
             <input
               type="text"
-              placeholder="🔎 Search favorites by name or category..."
+              placeholder="🔎 Search favourites by name or category..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="search-input"
