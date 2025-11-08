@@ -1,27 +1,30 @@
 # Mini SaaS Template Store
 
-A full-stack web application that allows users to browse, favorite, and manage website templates.
+A full-stack web application that allows users to browse, favorite, and manage website templates with advanced search functionality.
 
 ## Tech Stack
 
 **Frontend:** React.js with React Router
 **Backend:** Node.js + Express.js
-**Database:** MongoDB
+**Database:** SQLite with Knex.js ORM
 **Authentication:** JWT
 
 ## Features
 
 - User registration and login with JWT authentication
-- Browse available templates with image, title, and description
+- Browse available templates with image, title, and detailed descriptions
+- **🔎 Advanced Search** - Filter templates by name or category with real-time results
 - Mark templates as favorites (authenticated users only)
-- View personal favorites in a dedicated section
-- Responsive design with clean UI
+- View personal favorites in a dedicated section with search functionality
+- **Enhanced Template Details** - Each template includes additional descriptive information
+- Responsive design with modern glassmorphism UI
+- Improved navbar with better logout button visibility
 
 ## Setup Instructions
 
 ### Prerequisites
 - Node.js (v14 or higher)
-- MongoDB (local installation or MongoDB Atlas)
+- SQLite (automatically handled by sqlite3 package)
 
 ### Backend Setup
 
@@ -35,9 +38,8 @@ cd server
 npm install
 ```
 
-3. Create a `.env` file with your MongoDB connection string:
+3. Create a `.env` file with your configuration:
 ```
-MONGODB_URI=mongodb://localhost:27017/templatestore
 JWT_SECRET=your_jwt_secret_key_here
 PORT=5000
 ```
@@ -119,4 +121,25 @@ The application will be available at `http://localhost:3000`
 - Password hashing is implemented using bcryptjs
 - CORS is enabled for cross-origin requests
 - Input validation is implemented on both frontend and backend
+- **SQLite database** with Knex.js ORM for efficient data management
+- **Real-time search** functionality with case-insensitive filtering
+- **Enhanced UI** with glassmorphism design and improved accessibility
 - Responsive design works on desktop and mobile devices
+- **Additional template metadata** including detailed descriptions for better user experience
+
+## Recent Enhancements
+
+### ✨ New Features Added:
+1. **Advanced Search Functionality** - Real-time filtering by template name or category
+2. **Enhanced Template Information** - Additional descriptive lines for each template
+3. **Improved UI/UX** - Better styling, search icons, and visual feedback
+4. **Database Schema Updates** - Added `additional_description` field to templates
+5. **Search Integration** - Available on both Templates and Favorites pages
+6. **Better Navigation** - Improved logout button visibility and styling
+
+### 🛠️ Technical Improvements:
+- Migrated to SQLite for better portability and easier setup
+- Implemented Knex.js ORM for database operations
+- Added real-time search with debounced filtering
+- Enhanced responsive design with modern CSS techniques
+- Improved error handling and user feedback
