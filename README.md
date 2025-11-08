@@ -1,3 +1,8 @@
+# Personal Info
+Gokul A
+7708113676
+gokul240102@gmail.com
+
 # 🎨 Mini SaaS Template Store
 
 A modern, full-stack web application that allows users to browse, favourite, and manage website templates with advanced search functionality and beautiful UI design.
