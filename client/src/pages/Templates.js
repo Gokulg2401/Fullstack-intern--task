@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { useAuth } from '../utils/AuthContext';
 
 const Templates = () => {
@@ -24,7 +24,7 @@ const Templates = () => {
 
   const fetchTemplates = async () => {
     try {
-      const response = await axios.get('/api/templates');
+      const response = await api.get('/api/templates');
       setTemplates(response.data);
     } catch (error) {
       console.error('Error fetching templates:', error);
@@ -33,7 +33,7 @@ const Templates = () => {
 
   const fetchFavorites = async () => {
     try {
-      const response = await axios.get('/api/templates/favorites/user');
+      const response = await api.get('/api/templates/favorites/user');
       setFavorites(response.data.map(fav => fav.id));
     } catch (error) {
       console.error('Error fetching favorites:', error);
@@ -47,10 +47,10 @@ const Templates = () => {
       const isFavorited = favorites.includes(templateId);
       
       if (isFavorited) {
-        await axios.delete(`/api/templates/favorites/${templateId}`);
+        await api.delete(`/api/templates/favorites/${templateId}`);
         setFavorites(prev => prev.filter(id => id !== templateId));
       } else {
-        await axios.post(`/api/templates/favorites/${templateId}`);
+        await api.post(`/api/templates/favorites/${templateId}`);
         setFavorites(prev => [...prev, templateId]);
       }
     } catch (error) {

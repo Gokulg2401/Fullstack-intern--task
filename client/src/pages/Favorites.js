@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { useAuth } from '../utils/AuthContext';
 
 const Favorites = () => {
@@ -15,7 +15,7 @@ const Favorites = () => {
 
   const fetchFavorites = async () => {
     try {
-      const response = await axios.get('/api/templates/favorites/user');
+      const response = await api.get('/api/templates/favorites/user');
       setFavorites(response.data);
     } catch (error) {
       console.error('Error fetching favorites:', error);
@@ -24,7 +24,7 @@ const Favorites = () => {
 
   const removeFavorite = async (templateId) => {
     try {
-      await axios.delete(`/api/templates/favorites/${templateId}`);
+      await api.delete(`/api/templates/favorites/${templateId}`);
       setFavorites(prev => prev.filter(template => template.id !== templateId));
       // Also update the main templates page favorites if needed
       window.dispatchEvent(new CustomEvent('favoriteRemoved', { detail: templateId }));
